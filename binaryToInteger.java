@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class binaryToInteger {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a binary number: ");
+        String binaryString = scanner.nextLine();
+        
+        try {
+            int decimalValue = Integer.parseInt(binaryString, 2);
+            System.out.println("The decimal value is: " + decimalValue);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid binary number.");
+        }
+        
+        scanner.close();
+    }
+}
